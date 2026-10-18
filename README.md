@@ -22,7 +22,6 @@ Fun fact: AI coding tools were not used in the making of this repository!
 `~/.local/share/wists/scan/nodes/` - Store JSON files of scanned repositories  
 `~/.local/share/wists/scan/repos/` - Store downloaded/cloned repositories  
 `~/.local/share/wists/cli/` - Parse commands  
-`~/.local/share/wists/lib` - Store downloaded repositories  
 
 ## Scanning
 

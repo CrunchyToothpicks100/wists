@@ -7,12 +7,22 @@ export const download = (args: string[]) => {
     console.log(usage.download);
     process.exit(1);
   }
+  if (args.length === 0) {
+    console.log(chalk.red("Not enough arguments!"));
+    console.log(usage.download);
+    process.exit(1);
+  }
   const url = args[0];
 };
 
 export const clone = (args: string[]) => {
   if (args.length > 1) {
     console.log(chalk.red("Too many arguments!"));
+    console.log(usage.clone);
+    process.exit(1);
+  }
+  if (args.length === 0) {
+    console.log(chalk.red("Not enough arguments!"));
     console.log(usage.clone);
     process.exit(1);
   }
@@ -25,6 +35,10 @@ export const scan = (args: string[]) => {
     console.log(usage.scan);
     process.exit(1);
   }
+  if (args.length === 0) {
+    // Select a repository
+    process.exit(0);
+  }
   const repo = args[0];
 };
 
@@ -33,6 +47,10 @@ export const view = (args: string[]) => {
     console.log(chalk.red("Too many arguments!"));
     console.log(usage.view);
     process.exit(1);
+  }
+  if (args.length === 0) {
+    // Select a repository
+    process.exit(0);
   }
   const repo = args[0];
 };

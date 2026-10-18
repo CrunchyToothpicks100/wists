@@ -1,0 +1,109 @@
+{
+  "Dir": {
+    "info": "",
+    "src": {
+      "info": "",
+      "web": {
+        "info": ""
+      },
+      "api": {
+        "info": ""
+      }
+    }
+  },
+  "Software": {
+    "Build": {
+      "Node.js": {
+        "Tools": [
+          {
+            "Name": "Vite",
+            "Desc": "Bundles your Javascript"
+          }
+        ]
+      }
+    },
+    "Run": {
+      "Node.js": {
+        "Tools": [
+          {
+            "Name": "React",
+            "Desc": "Front-end library"
+          },
+          {
+            "Name": "Vite",
+            "Desc": "Runs your Dev server"
+          }
+        ]
+      }
+    }
+  },
+  "Network": [
+    {
+      "Flow Chart": {
+        "Position": [0, 3]
+      },
+      "Layers": {
+        "Hardware": [
+          {
+            "Name": "Raspberry Pi",
+            "Desc": "Motor Control Unit",
+            "Interface": [
+              {
+                "Name": "eth0",
+                "Desc": "Rear RJ45 Port",
+                "IP Config": {
+                  "IPv4": "192.x.x.x",
+                  "IPv6": "x::x::x::x::x::x",
+                  "Subnet": "255.255.255.0",
+                  "Gateway": "192.x.x.x",
+                  "Public": "hidden"
+                },
+                "Port": [
+                  {
+                    "Number": 443,
+                    "TCP": {
+                      "Frame": [
+                        {
+                          "Type": "HTTPS",
+                          "Security": "TLS",
+                          "Desc": "Send telemetry data",
+                          "Endpoint": "https://yoururl.com/telemetry",
+                          "Headers": {
+                            "Type": "POST",
+                            "ContentType": "JSON"
+                          },
+                          "Payload": [
+                            "JWT Token",
+                            "Robot ID",
+                            "Temperature",
+                            "Rotation",
+                            "Position"
+                          ]
+                        }
+                      ]
+                    },
+                    "UDP": {}
+                  },
+                  {
+                    "Number": 4321,
+                    "TCP": {},
+                    "UDP": {
+                      "Frame": [
+                        {
+                          "Type": "RTC",
+                          "Security": "AES-256",
+                          "Desc": "Send audio stream",
+                          "Endpoint": "https://yoururl.com/audio"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "Repositories": [
+    {
+      "Type": "Local",
+      "Date added": "2026-10-16",
+      "Last Scan": "2026-10-16",
+      "Path": "/home/oliver/projects/chess-fast/"
+    },
+    {
+      "Type": "Clone",
+      "Date added": "2026-10-16",
+      "Last Scan": "2026-10-16",
+      "Path": "/home/oliver/.local/share/wists/scan/repos/wists"
+    }
+  ]
+}

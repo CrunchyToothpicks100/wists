@@ -1,0 +1,60 @@
+{
+  "Dir nodes": {
+    "info": "",
+    "src": {
+      "info": "",
+      "web": {
+        "info": ""
+      },
+      "api": {
+        "info": ""
+      }
+    }
+  },
+  "Network": [
+    {
+      "Flow Chart": {
+        "Position": [1, 2]
+      },
+      "Layers": {
+        "Hardware": [
+          {
+            "Name": "default",
+            "Interface": [
+              {
+                "Name": "default",
+                "Port": [
+                  {
+                    "Number": 443,
+                    "TCP": {
+                      "Frame": [
+                        {
+                          "Type": "HTTPS",
+                          "Security": "TLS",
+                          "Desc": "Send telemetry data",
+                          "Endpoint": "https://yoururl.com/telemetry",
+                          "Headers": {
+                            "Type": "POST",
+                            "ContentType": "JSON"
+                          },
+                          "Payload": [
+                            "JWT Token",
+                            "Robot ID",
+                            "Temperature",
+                            "Rotation",
+                            "Position"
+                          ]
+                        }
+                      ]
+                    },
+                    "UDP": {}
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
